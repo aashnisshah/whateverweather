@@ -1,7 +1,7 @@
 var settings = {
 	geoip_api: 'http://freegeoip.net/json/',
 	forecast_base_url: 'https://api.forecast.io/forecast/',
-	forecast_api_key: 'a956d10ffcc9d53ec8df86a24cbdd5d2'
+	forecast_api_key: ''
 }
 var city = '';
 var country = '';
