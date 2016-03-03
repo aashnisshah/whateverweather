@@ -1,0 +1,20 @@
+body {
+  background: #F2F2F1;
+  min-width: 500px;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  color: #3D3C37;
+}
+
+a {
+  color: #8C8D85;
+}
+
+h1 {
+	color: #AA162C;
+}
+
+.small {
+  font-size: 12px;
+}

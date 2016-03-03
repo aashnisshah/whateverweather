@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "WhateverWeather",
+  "description": "Bringing your weather reports right to you.",
+  "version": "1.0",
+
+  "icons": {
+    "128": "icon.png"
+  },
+  "author": "aashnisshah",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "https://api.forecast.io/forecast/*"
+  ],
+  "optional_permissions": ["tabs"]
+}
