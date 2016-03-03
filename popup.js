@@ -57,8 +57,6 @@ function getForecast(data) {
  * html page
  */
 function display(data) {
-	console.log('display', data);
-
 	if(!data || !city || !country) {
 		var wwCity = document.getElementById('ww-city');
 		wwCity.innerText = 'ERROR processing information. Please try again later.';
@@ -69,11 +67,22 @@ function display(data) {
 	wwCity.innerText = 'You are currently in ' + city + ', ' +  country;
 
 	var wwTemp = document.getElementById('ww-temp');
-	wwTemp.innerText = 'It is currently ' + data.currently.temperature + ' deg F and feels like ' +
-						data.currently.apparentTemperature + ' deg F.';
+	var curTempCel = convertDegrees(data.currently.temperature);
+	var curApparentTempCel = convertDegrees(data.currently.apparentTemperature);
+	wwTemp.innerText = 'It is currently ' + curTempCel + ' \u00B0C  and feels like ' +
+						curApparentTempCel + ' \u00B0C.';
 
 	var wwSummary = document.getElementById('ww-summary');
 	wwSummary.innerText = data.currently.summary;
+}
+
+/* this function converts degrees farenheit to 
+ * degrees celsius
+ */
+function convertDegrees(temp) {
+	var newTemp = (temp - 32) * (5/9);
+	newTemp = Math.floor(newTemp);
+	return newTemp;
 }
 
 /* this eventListener allows us to create a new tab when we click on 
