@@ -1,7 +1,7 @@
 var settings = {
 	geoip_api: 'http://freegeoip.net/json/',
 	forecast_base_url: 'https://api.forecast.io/forecast/',
-	forecast_api_key: ''
+	forecast_api_key: 'efef5b24c56be10322b61997729b8e5e'
 }
 var city = '';
 var country = '';
@@ -60,7 +60,6 @@ function display(data) {
 	if(!data || !city || !country) {
 		var wwCity = document.getElementById('ww-city');
 		wwCity.innerText = 'ERROR processing information. Please try again later.';
-		return;
 	}
 
 	var wwCity = document.getElementById('ww-city');
